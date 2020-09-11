@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #564caf;
+  color: white;
+}
+</style>
+</head>
+<body>
+  <a href="http://localhost:8080/addnewauthor">Add Author</a>
+  <a href="http://localhost:8080/listauthors">List Authors</a>
+  <a href="http://localhost:8080/addnewbook">Add Book</a>
+  <a href="http://localhost:8080/listbooks">List Books</a>
+  <a href="http://localhost:8080/deletebook">Delete Book</a>
+  <a href="http://localhost:8080/updateauthor">Update Author</a>
+    <h1>List of Authors</h1>
+<table id="customers">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Address</th>
+        <th>Number of Books</th>
+        <th>Author ID</th>
+     
+    <% for(let i=0; i < ar.length; i++){ %>
+        <tr>
+            <td><%= (i+1) %></td>
+            <td><%= ar[i].name.fname %> <%= ar[i].name.lname %></td>
+            <td><%= ar[i].dob %></td>
+            <td><%= ar[i].address.unit %> <%= ar[i].address.street %> <%= ar[i].address.suburb %> <%= ar[i].address.state %></td>
+            <td><%= ar[i].numBooks %></td>
+            <td><%= ar[i]._id %></td>
+        </tr> 
+    <%}%>
+</table>
+
+</body>
+</html>

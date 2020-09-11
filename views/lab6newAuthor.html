@@ -1,0 +1,36 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <style>
+        body {
+          background-image: url('https://image.winudf.com/v2/image1/Y29tLnFhbmplcnVtYmkud2hpdGUud2hpdGViYWNrZ3JvdW5kX3NjcmVlbl8wXzE1NDE5NzAyMDlfMDQ0/screen-0.jpg?fakeurl=1&type=.jpg');
+        }
+    </style>
+
+    <body>
+        <a href="http://localhost:8080/addnewauthor">Add Author</a>
+        <a href="http://localhost:8080/listauthors">List Authors</a>
+        <a href="http://localhost:8080/addnewbook">Add Book</a>
+        <a href="http://localhost:8080/listbooks">List Books</a>
+        <a href="http://localhost:8080/deletebook">Delete Book</a>
+        <a href="http://localhost:8080/updateauthor">Update Author</a>
+
+        <h1>Add a New Author</h1>
+
+        <form method = "post" action = "/addnewauthor">
+            <br>First Name <input type="text" name="fname" required/></br>
+            <br>Last Name <input type="text" name="lname"/></br>
+            <br>Date of Birth <input type="date" name="dob"/></br>
+            <br>State <input type="text" name="state"/></br>
+            <br>Suburb <input type="text" name="suburb"/></br>
+            <br>Street <input type="text" name="street"/></br>
+            <br>Unit <input type="text" name="unit"/></br>
+            <br>Number of Books <input type="number" name="numbooks"/></br>
+            <br><button type="submit">Add Author</button><br>
+
+        </form>
+    </body>
+</html>

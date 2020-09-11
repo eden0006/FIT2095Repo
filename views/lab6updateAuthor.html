@@ -1,0 +1,30 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <style>
+        body {
+          background-image: url('https://image.winudf.com/v2/image1/Y29tLnFhbmplcnVtYmkud2hpdGUud2hpdGViYWNrZ3JvdW5kX3NjcmVlbl8wXzE1NDE5NzAyMDlfMDQ0/screen-0.jpg?fakeurl=1&type=.jpg');
+        }
+    </style>
+
+    <body>
+        <a href="http://localhost:8080/addnewauthor">Add Author</a>
+        <a href="http://localhost:8080/listauthors">List Authors</a>
+        <a href="http://localhost:8080/addnewbook">Add Book</a>
+        <a href="http://localhost:8080/listbooks">List Books</a>
+        <a href="http://localhost:8080/deletebook">Delete Book</a>
+        <a href="http://localhost:8080/updateauthor">Update Author</a>
+
+        <h1>Update Author amount of Books</h1>
+
+        <form method = "post" action = "/updateauthor">
+            Author ID <input type="text" name="id" placeholder="Insert Author ID!" required/>
+            New Number of Books <input type="number" name="numbooks" required/>
+            <button type="submit">Update Author</button>
+
+        </form>
+    </body>
+</html>
