@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 
+var today = new Date();
+var currentDate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
 const authorSchema = mongoose.Schema({
     name: {
         fname: {
@@ -9,7 +12,13 @@ const authorSchema = mongoose.Schema({
         lname: {type: String}
     },
 
-  dob: {type: Date
+  dob: {type: Date,
+    validate: {
+        validator: function (dateValue) {
+            return dateValue <= Date.now();
+        },
+        message: 'Date of Birth must not be in the future'
+    }
 },
 
   address: {
