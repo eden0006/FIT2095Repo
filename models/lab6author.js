@@ -1,8 +1,5 @@
 const mongoose = require("mongoose");
 
-var today = new Date();
-var currentDate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-
 const authorSchema = mongoose.Schema({
     name: {
         fname: {
